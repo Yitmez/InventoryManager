@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wooja Inventory Manager", "Wooja Inventory Manager\Wooja Inventory Manager.csproj", "{7B118416-6238-4D7F-8CE0-DB905284C19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wooja.Inventory.Manager.Tests", "Wooja.Inventory.Manager.Tests\Wooja.Inventory.Manager.Tests.csproj", "{D2D7388D-B216-477F-8DCD-1774D959C270}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B118416-6238-4D7F-8CE0-DB905284C19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B118416-6238-4D7F-8CE0-DB905284C19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B118416-6238-4D7F-8CE0-DB905284C19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B118416-6238-4D7F-8CE0-DB905284C19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D7388D-B216-477F-8DCD-1774D959C270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D7388D-B216-477F-8DCD-1774D959C270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D7388D-B216-477F-8DCD-1774D959C270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D7388D-B216-477F-8DCD-1774D959C270}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED4981B6-90F4-402C-9472-F02105B1B7DC}
+	EndGlobalSection
+EndGlobal
