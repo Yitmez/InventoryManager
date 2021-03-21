@@ -18,6 +18,7 @@ namespace Wooja_Inventory_Manager
             databaseContext.Database.EnsureCreated();
 
             CreateHostBuilder(args).Build().Run();
+           /////////////////////////databaseContext.
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -26,5 +27,8 @@ namespace Wooja_Inventory_Manager
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+       
+       
     }
 }

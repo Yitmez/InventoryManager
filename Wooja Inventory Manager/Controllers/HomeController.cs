@@ -18,6 +18,10 @@ namespace Wooja_Inventory_Manager.Controllers
             _logger = logger;
         }
 
+       
+
+
+
         public IActionResult Index()
         {
             return View();
@@ -30,11 +34,23 @@ namespace Wooja_Inventory_Manager.Controllers
         {
             return View();
         }
-        public IActionResult Editor()
-        {
+       
+        [HttpPost]
+        public IActionResult Editor(string category, string brand, string name)
+        { 
+            Item item = new Item() { Name = name, Brand = brand };
+         
+            // tempContext.Tiere.Add(angelegtesTier);
+            // tempContext.SaveChanges();
             return View();
         }
 
+        [HttpGet]     // editor ohne parameter
+        public IActionResult Editor()
+        {
+
+            return View();
+        }
 
         public IActionResult Privacy()
         {

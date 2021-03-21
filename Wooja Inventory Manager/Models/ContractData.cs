@@ -27,7 +27,7 @@ namespace Wooja_Inventory_Manager.Models
         
         public ContractData ()
         {
-            new ContractData();
+           // new ContractData();
         }
     }
 }

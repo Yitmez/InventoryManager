@@ -16,14 +16,14 @@ namespace Wooja_Inventory_Manager.Models.Context
         }
 
         public DbSet<Settings> Settings { get; set; }
-        public DbSet<Devices> Devices { get; set; }
-        public DbSet<Tags> Tags { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Tag> Tags { get; set; }
         public DbSet<ContractData> ContractData { get; set; }
 
-        public DbSet<Classes> Classes { get; set; }
+        public DbSet<Class> Classes { get; set; }
  
-         public DbSet<Categories> Categories { get; set; }
-       public DbSet<SubCategories> SubCategories { get; set; }
+         public DbSet<Category> Categories { get; set; }
+       public DbSet<SubCategory> SubCategories { get; set; }
        public DbSet<Stati> Stati { get; set; }
        public DbSet<User> Users { get; set; }
        public DbSet<Localization> Locals { get; set; }
