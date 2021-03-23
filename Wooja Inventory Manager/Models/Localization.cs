@@ -15,9 +15,9 @@ namespace Wooja_Inventory_Manager.Models
         public string Shelf { get; set; }
         public string ANNumber { get; set; } // Alphanumeric number
 
-        public Localization ()
-        {
-            new Localization(); 
-        }
+        //public Localization ()
+        //{
+        //    new Localization(); 
+        //}
     }
 }

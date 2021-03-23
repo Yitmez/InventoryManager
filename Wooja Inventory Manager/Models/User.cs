@@ -14,9 +14,43 @@ namespace Wooja_Inventory_Manager.Models
         {
             get; set;
         }
-        public string Rights
+        public Profile Profile
         {
             get; set;
-         }
+        }
+        public Rights Rights
+        {
+            get; set;
+        }
+
+        public bool GDPR
+        {
+            get; set;
+        }
+        public DateTime GDPRDate
+        {
+            get; set;
+        }
+        public bool TermsOfUse
+        {
+            get; set;
+        }
+        public DateTime TermsOfUseDate
+        {
+            get; set;
+        }
+        public string ExtraField
+        {
+            get; set;
+        }
+        public bool ExtraBoolField
+        {
+            get; set;
+        }
+        public Mandatory Mandatory
+        {
+            get; set;
+        }
+
     }
 }

@@ -22,12 +22,12 @@ namespace Wooja_Inventory_Manager.Models
         public string Customer { get; set; }
         public string CustomerLand { get; set; }
         public string CustomerAdres { get; set; }
-        public string Infos { get; set; }
+        public string Info { get; set; }
         public bool Payed { get; set; }
         
         public ContractData ()
         {
-            new ContractData();
+           // new ContractData();
         }
     }
 }
