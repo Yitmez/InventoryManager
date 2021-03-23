@@ -15,8 +15,20 @@ namespace Wooja_Inventory_Manager.Models
         public string Logo { get; set; }   ////
        public  int MwSt { get; set; }
        public int DateYear { get; set; }
-       public  int AmongLabels { get; set; }
+        public string Language { get; set; }
+      
+        public  int AmongLabels { get; set; }
        public bool LabelOn { get; set; }
+        public string Server { get; set; }
+        public string Port { get; set; }
+        public string PW { get; set; }
+        public string Server2 { get; set; }
+        public string Port2 { get; set; }
+        public string PW2 { get; set; }
+        public string LicenceType { get; set; }
+        public string ProductKey { get; set; }
+        public string LicenceChecked { get; set; }
+
 
     }
 }
