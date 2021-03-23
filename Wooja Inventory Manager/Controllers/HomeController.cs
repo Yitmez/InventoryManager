@@ -36,7 +36,7 @@ namespace Wooja_Inventory_Manager.Controllers
         }
        
         [HttpPost]
-        public IActionResult Editor(string category, string brand, string name)
+        public IActionResult Editor(Category category, Brand brand, string name)
         { 
             Item item = new Item() { Name = name, Brand = brand };
          

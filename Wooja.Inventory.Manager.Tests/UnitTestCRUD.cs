@@ -26,7 +26,7 @@ namespace Wooja.Inventory.Manager.Tests
         [HttpPost]
         public void CanCreatingNewDeviceWithProperties()
         {
-            Item Item = new Item() { Name = "Fahrzeugname", Brand="MAN" } ;
+            Item Item = new Item() { Name = "Fahrzeugname"};  // Brand="MAN" Fehlermeldung???
 
         }
 
