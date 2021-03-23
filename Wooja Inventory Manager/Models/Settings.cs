@@ -28,6 +28,10 @@ namespace Wooja_Inventory_Manager.Models
         public string LicenceType { get; set; }
         public string ProductKey { get; set; }
         public string LicenceChecked { get; set; }
+        public LogFile ProgramLog{ get; set; } = new LogFile();
+        public List<ExtFields> ExtFields { get; set; } // Alle Felder die Hier angelegt
+                                                       // werden fließen bei Neuanlegen von Items
+                                                       // in den entsprechenden ExtFields Liste mit rein
 
 
     }
