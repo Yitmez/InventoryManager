@@ -1,0 +1,25 @@
+[33mcommit e5b6a4322f3ffb31bd3f939b8459c9420fa6873f[m[33m ([m[1;36mHEAD -> [m[1;32mworking[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Yitmez, K <yitmez@live.de>
+Date:   Mon Mar 22 23:38:17 2021 +0100
+
+    Revert "View-Ansicht"
+    
+    This reverts commit 1148e8f76d29677446ae2e379de07a60d01ca41c.
+
+[33mcommit 1148e8f76d29677446ae2e379de07a60d01ca41c[m
+Author: Yitmez, K <yitmez@live.de>
+Date:   Mon Mar 22 22:34:24 2021 +0100
+
+    View-Ansicht
+
+[33mcommit c8b960294787d32af6e4fd6ac7393e6cf554229d[m
+Author: Yitmez, K <yitmez@live.de>
+Date:   Sun Mar 21 21:10:45 2021 +0100
+
+    Datenspeicherrung klappt
+
+[33mcommit 5e72a1091d4ca0240fa5ee6ddda43569f3ffaaff[m
+Author: Yitmez, K <yitmez@live.de>
+Date:   Thu Mar 18 22:22:15 2021 +0100
+
+    First Commit

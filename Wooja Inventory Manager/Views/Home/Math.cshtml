@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@using Wooja_Inventory_Manager.Controllers
+@Model result
+@{
+
+}
+
+<head>
+    <script type="text/javascript" scr="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/scripts/default.js"></script>
+</head>
+<h2>Math</h2>
+
+<body>
+    <form action="/home/math" method="get" id="mathForm">
+
+
+        Enter X: <input for="x" type="text" name="x" id="x" /><br />
+
+        Enter Y: <input for="y" type="text" name="y" /><br />
+        Result: <span id="result">@Model </span><br />
+
+        <button>Addiere</button>
+
+    </form>
+    <button onclick="giveMeFive()">Give me five!</button>
+
+</body>

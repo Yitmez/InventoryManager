@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Wooja_Inventory_Manager.Models
 {
-    public class Stati
+    public class SubCategory
     {
         [Key]
         public int Id { get; set; }
-        public string Status { get; set; }
-        public string Description { get; set; }
-
+        public string SubCategoryName { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace Wooja_Inventory_Manager.Models
         public string Seller { get; set; }
         public DateTime PurchasingDate { get; set; }
         public int PurchasingValue { get; set; }
-        public int PInvoiceId { get; set; }
+        public string PInvoiceNo { get; set; }
         public int ValueOfGood { get; set; }
 
         public DateTime PayDate { get; set; }

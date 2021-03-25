@@ -1,0 +1,105 @@
+﻿@model Wooja_Inventory_Manager.Models.Item
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FolderNo" class="control-label"></label>
+                <input asp-for="FolderNo" class="form-control" />
+                <span asp-validation-for="FolderNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SN" class="control-label"></label>
+                <input asp-for="SN" class="form-control" />
+                <span asp-validation-for="SN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConstructionYear" class="control-label"></label>
+                <input asp-for="ConstructionYear" class="form-control" />
+                <span asp-validation-for="ConstructionYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetAmount" class="control-label"></label>
+                <input asp-for="NetAmount" class="form-control" />
+                <span asp-validation-for="NetAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Sold" /> @Html.DisplayNameFor(model => model.Sold)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoldDate" class="control-label"></label>
+                <input asp-for="SoldDate" class="form-control" />
+                <span asp-validation-for="SoldDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Reserved" /> @Html.DisplayNameFor(model => model.Reserved)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LendOutAmount" class="control-label"></label>
+                <input asp-for="LendOutAmount" class="form-control" />
+                <span asp-validation-for="LendOutAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LendOut" /> @Html.DisplayNameFor(model => model.LendOut)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LendOutDate" class="control-label"></label>
+                <input asp-for="LendOutDate" class="form-control" />
+                <span asp-validation-for="LendOutDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LocalSale" /> @Html.DisplayNameFor(model => model.LocalSale)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastSeenOn" class="control-label"></label>
+                <input asp-for="LastSeenOn" class="form-control" />
+                <span asp-validation-for="LastSeenOn" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CurrentInv" /> @Html.DisplayNameFor(model => model.CurrentInv)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
