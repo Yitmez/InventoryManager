@@ -30,7 +30,7 @@ namespace Wooja_Inventory_Manager.Models.Context
        public DbSet<User> Users { get; set; }
        public DbSet<Localization> Location { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
-        public DbSet<LogFile> LogFile { get; set; }
+        public DbSet<LogX> LogX { get; set; }
         public DbSet<Mandatory> Mandatories { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Rights> Rights { get; set; }
@@ -39,7 +39,8 @@ namespace Wooja_Inventory_Manager.Models.Context
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Condition> Conditions { get; set; }
-
+        public DbSet<AddOn> AddOns { get; set; }
+        
 
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wooja_Inventory_Manager.Models
 {
-    public class LogFile
+    public class Log
     {
         [Key]
         public int Id { get; set; }

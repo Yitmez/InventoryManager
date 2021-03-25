@@ -45,9 +45,11 @@ namespace Wooja_Inventory_Manager.Models
     public DateTime LastSeenOn { get; set; }
     public bool CurrentInv { get; set; }
     public List<Inventory> Inventory { get; set; }
-        public LogFile LogInfos { get; set; } = new LogFile();
+        public LogX LogInfos { get; set; } = new LogX();
       
         public List<ExtFields> ExtFields { get; set; }
-        
+        public int Latitude { get; set; }
+        public int Longitude { get; set; }  // 47.60879681163666, -122.34064140082347
+
     }
 }
