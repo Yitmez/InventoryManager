@@ -30,7 +30,7 @@ namespace Wooja_Inventory_Manager.Models.Context
        public DbSet<User> Users { get; set; }
        public DbSet<Localization> Location { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
-        public DbSet<LogX> LogX { get; set; }
+     //   public DbSet<LogX> LogX { get; set; }
         public DbSet<Mandatory> Mandatories { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Rights> Rights { get; set; }
