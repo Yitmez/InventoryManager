@@ -15,7 +15,7 @@ namespace Wooja_Inventory_Manager.Models
         public Mandatory MandatoryId { get; set; }
         public DateTime InvDate { get; set; }
         public User Responsive { get; set; }
-        public LogFile Changes { get; set; } = new LogFile();
+        public Log Changes { get; set; } = new Log();
         public string Info { get; set; }
         public string ExtraField { get; set; }
 

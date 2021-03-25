@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -108,9 +109,28 @@ namespace Wooja_Inventory_Manager.Controllers
         }
 
         // GET: ItemsController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            return View();
+
+            var item = await context.Items
+      .AsNoTracking()
+      .FirstOrDefaultAsync(i => i.Id == id);
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+            
+            else
+            {
+
+                // context.Items.Remove(item);
+                // context.SaveChanges();
+                // Lieber erst nach bestätigung löschen
+            }
+
+
+            return View(item);
         }
 
         // POST: ItemsController/Delete/5
