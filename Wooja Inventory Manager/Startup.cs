@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +32,7 @@ namespace Wooja_Inventory_Manager
             
             services.AddControllersWithViews();
             services.AddSingleton<IItemGenerator, Item>(); ///////////////////////////////
+            //services.AddSingleton<Services.MathService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +48,16 @@ namespace Wooja_Inventory_Manager
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+
+            //app.Run(MyMiddleware(2, 4);
+
+            //public async Task MyMiddleware() // HttpContext context
+            //{
+            //    await Services.MathService(int x, int y);
+            //}
+           // app.Run(MyMiddleware(2, 4));
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -60,5 +72,11 @@ namespace Wooja_Inventory_Manager
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+        //private RequestDelegate MyMiddleware(int v1, int v2)
+        //{
+        //    // throw new NotImplementedException();
+        //    return Services.MathService(2, 3);
+        //}
     }
 }

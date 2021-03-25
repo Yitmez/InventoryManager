@@ -154,3 +154,4 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Items\ItemsView.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Items\Edit.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Items\Delete.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Math.cshtml.g.cs

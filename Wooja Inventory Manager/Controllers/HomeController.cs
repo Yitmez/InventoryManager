@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Wooja_Inventory_Manager.Models;
+using Wooja_Inventory_Manager.Services;
 
 namespace Wooja_Inventory_Manager.Controllers
 {
@@ -29,6 +30,15 @@ namespace Wooja_Inventory_Manager.Controllers
         public IActionResult Settings()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Math(int x, int y)
+        {
+            // int result = x + y;
+            MathService mathService = new MathService();
+            
+            return View(mathService.MathAddition(x, y));
         }
         public IActionResult Dashboard()
         {
