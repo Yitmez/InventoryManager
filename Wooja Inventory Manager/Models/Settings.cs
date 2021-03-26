@@ -19,6 +19,7 @@ namespace Wooja_Inventory_Manager.Models
       
         public  int AmongLabels { get; set; }
        public bool LabelOn { get; set; }
+        public string DB { get; set; } // Welche DB - Auswahl
         public string Server { get; set; }
         public string Port { get; set; }
         public string PW { get; set; }

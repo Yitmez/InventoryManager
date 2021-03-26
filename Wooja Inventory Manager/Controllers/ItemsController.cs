@@ -136,16 +136,25 @@ namespace Wooja_Inventory_Manager.Controllers
         // POST: ItemsController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
         {
-            try
+            var item = await context.Items
+     .AsNoTracking()
+     .FirstOrDefaultAsync(i => i.Id == id);
+
+            if (item == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
-            catch
+
+            else
             {
-                return View();
+
+                context.Items.Remove(item);
+                context.SaveChanges();
             }
+            return View();
+            
         }
     }
 }
