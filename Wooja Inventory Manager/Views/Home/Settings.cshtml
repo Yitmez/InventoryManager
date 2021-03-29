@@ -1,71 +1,146 @@
-﻿
+﻿@model Wooja_Inventory_Manager.Models.Settings
+
 @{
     ViewData["Title"] = "Settings";
 }
 
 <h1>Settings</h1>
 
-<form method="get" action="/settings">
-    <!--simpleform.asp-->
-    <label for="category">Einstellungen:</label>
+<h4>Settings</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Settings">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Theme" class="control-label"></label>
+                <input asp-for="Theme" class="form-control" />
+                <span asp-validation-for="Theme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Logo" class="control-label"></label>
+                <input asp-for="Logo" class="form-control" />
+                <span asp-validation-for="Logo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MwSt" class="control-label"></label>
+                <input asp-for="MwSt" class="form-control" />
+                <span asp-validation-for="MwSt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateYear" class="control-label"></label>
+                <input asp-for="DateYear" class="form-control" />
+                <span asp-validation-for="DateYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Language" class="control-label"></label>
+                <input asp-for="Language" class="form-control" />
+                <span asp-validation-for="Language" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AmongLabels" class="control-label"></label>
+                <input asp-for="AmongLabels" class="form-control" />
+                <span asp-validation-for="AmongLabels" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LabelOn" /> @Html.DisplayNameFor(model => model.LabelOn)
+                </label>
+            </div>
+            
+
+            <label for="">DB:</label>
+            <select name="db" id="">
+                <option value="new">DB Auswahl</option>
+                <option name="DB" value="Sqlite">SQLite</option>
+                <option name="DB" value="Sqlite2">SQLite2</option>
 
 
-
-    Theme: <input type="theme" name="theme"><br>
-    Firmenname: <input type="companyname" name="Firmenname"><br>
+            </select>
 
 
+            <div class="form-group">
+                <label asp-for="Server" class="control-label"></label>
+                <input asp-for="Server" class="form-control" />
+                <span asp-validation-for="Server" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConString" class="control-label"></label>
+                <input asp-for="ConString" class="form-control" />
+                <span asp-validation-for="ConString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Port" class="control-label"></label>
+                <input asp-for="Port" class="form-control" />
+                <span asp-validation-for="Port" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PW" class="control-label"></label>
+                <input asp-for="PW" class="form-control" />
+                <span asp-validation-for="PW" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Server2" class="control-label"></label>
+                <input asp-for="Server2" class="form-control" />
+                <span asp-validation-for="Server2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConString2" class="control-label"></label>
+                <input asp-for="ConString2" class="form-control" />
+                <span asp-validation-for="ConString2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Port2" class="control-label"></label>
+                <input asp-for="Port2" class="form-control" />
+                <span asp-validation-for="Port2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PW2" class="control-label"></label>
+                <input asp-for="PW2" class="form-control" />
+                <span asp-validation-for="PW2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LicenceType" class="control-label"></label>
+                <input asp-for="LicenceType" class="form-control" />
+                <span asp-validation-for="LicenceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductKey" class="control-label"></label>
+                <input asp-for="ProductKey" class="form-control" />
+                <span asp-validation-for="ProductKey" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LicenceChecked" class="control-label"></label>
+                <input asp-for="LicenceChecked" class="form-control" />
+                <span asp-validation-for="LicenceChecked" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Version" class="control-label"></label>
+                <input asp-for="Version" class="form-control" />
+                <span asp-validation-for="Version" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>
 
 
-
-
-    <!--  -->
-    <input type="submit" value="Speichern">
-</form>
-
-<label for="">Kategorien:</label>
 <select name="" id="">
-    <option value="new">Neu anlegen</option>
+    <option value="edit" method="get">Speichern</option>
 
 
 </select>
-<br />
-<label for="">Unterkategorien:</label>
-<select name="" id="">
-    <option value="new">Neu anlegen</option>
-
-</select>
-<br />
-<label for="">Tags</label>
-<select name="" id="">
-    <option value="new">Neu anlegen</option>
-
-</select>
-<br />
-<label for="">Stati</label>
-<select name="" id="">
-    <option value="new">Neu anlegen</option>
-
-</select>
-<br />
-
-<label for="">Tags</label>
-<select name="" id="">
-    <option value="new">Neu anlegen</option>
-
-</select>
-<br />
-<label for="">Localization</label>
-<select name="" id="">
-    <option value="new">Neu anlegen</option>
-
-</select>
-<br />
-<label for="">DB:</label>
-<select name="db" id="">
-    <option value="new">DB Auswahl</option>
-    <option name="DB"  value="Sqlite">SQLite</option>
-    <option name="DB" value="Sqlite2">SQLite2</option>
 
 
-</select>

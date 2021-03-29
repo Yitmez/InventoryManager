@@ -107,7 +107,6 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.dll
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.pdb
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.genruntimeconfig.cache
-C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Settings.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Editor.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
@@ -158,3 +157,4 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Libraries.L-DE.resources
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Libraries.L-EN.resources
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.csproj.GenerateResource.cache
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Settings.cshtml.g.cs

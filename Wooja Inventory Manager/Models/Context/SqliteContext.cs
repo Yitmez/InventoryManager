@@ -15,7 +15,7 @@ namespace Wooja_Inventory_Manager.Models.Context
             base.OnConfiguring(optionsBuilder);
         }
 
-        public DbSet<Settings> Settings { get; set; }
+        public DbSet<Settings> Settings { get; set; } 
         public DbSet<SystemLog> SystemLog { get; set; }
         public DbSet<Assets> Assets { get; set; }
         public DbSet<Item> Items { get; set; }

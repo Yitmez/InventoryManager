@@ -37,8 +37,8 @@ namespace Wooja_Inventory_Manager
             services.AddSingleton<IItemGenerator, Item>(); ///////////////////////////////
 
             // Über DI DBs unterscheiden
-            services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
 
             //services.AddSingleton<Services.MathService>();

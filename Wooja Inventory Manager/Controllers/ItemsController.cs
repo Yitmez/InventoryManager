@@ -149,7 +149,6 @@ namespace Wooja_Inventory_Manager.Controllers
 
             else
             {
-
                 context.Items.Remove(item);
                 context.SaveChanges();
             }
