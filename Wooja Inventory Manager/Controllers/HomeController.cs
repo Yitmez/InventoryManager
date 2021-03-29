@@ -15,6 +15,7 @@ namespace Wooja_Inventory_Manager.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -27,6 +28,9 @@ namespace Wooja_Inventory_Manager.Controllers
 
         public IActionResult Index()
         {
+
+            // Hier Cockieabfrage einbauen ???
+
             return View();
         }
 
@@ -46,23 +50,18 @@ namespace Wooja_Inventory_Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> Settings(string theme, string companyName, string db) // string logoPath, string version, int tax,, string language, string server, string port,
         {
-           
            // if(sqliteContext..Settings)
-            //
-
             Settings settings;
-
-
             try
             {
                 settings = await sqliteContext.Settings
                          .AsNoTracking()
                          .FirstOrDefaultAsync(i => i.Id == 1);
-
                 settings.Theme = theme;
                 settings.CompanyName = companyName;
                 //settings.Version = version;
                 settings.DB = db;
+                //Configuration[]   // in die Configurationsdatei schreiben -> wie??
                 // settings.Language = language;
 
                 sqliteContext.Settings.Update(settings);

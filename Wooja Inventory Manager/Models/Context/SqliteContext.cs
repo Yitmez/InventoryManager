@@ -14,6 +14,19 @@ namespace Wooja_Inventory_Manager.Models.Context
             optionsBuilder.UseSqlite("Data Source=InventorySqlite.db");
             base.OnConfiguring(optionsBuilder);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Settings>().HasData(
+                new Settings
+                {
+                    Id = 1,
+                    Theme = "Wooja",
+                    DB = "Sqlite",
+                    CompanyName = "",
+                   // ProgramLog = new Log()
+
+        }) ;
+        }
 
         public DbSet<Settings> Settings { get; set; } 
         public DbSet<SystemLog> SystemLog { get; set; }

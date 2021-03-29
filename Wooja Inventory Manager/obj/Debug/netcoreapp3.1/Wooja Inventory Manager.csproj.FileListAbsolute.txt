@@ -154,7 +154,7 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Items\Delete.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Math.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.csprojAssemblyReference.cache
-C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Libraries.L-DE.resources
-C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Libraries.L-EN.resources
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja Inventory Manager.csproj.GenerateResource.cache
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Settings.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Resources.DE.resources
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Resources.EN.resources

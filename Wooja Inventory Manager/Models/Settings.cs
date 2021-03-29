@@ -8,8 +8,8 @@ namespace Wooja_Inventory_Manager.Models
 {
     public class Settings
     {
-        [Key]
-        public int Id { get; set; }
+       [Key]
+       public int Id { get; set; }
        public string Theme { get; set; }
        public string CompanyName { get; set; }
         public string Logo { get; set; }   
@@ -32,7 +32,7 @@ namespace Wooja_Inventory_Manager.Models
         public string ProductKey { get; set; }
         public string LicenceChecked { get; set; }
         public string Version { get; set; }
-        public Log ProgramLog{ get; set; } = new Log();
+      //  public Log ProgramLog{ get; set; }// = new Log();
         public List<ExtFields> ExtFields { get; set; } // Alle Felder die Hier angelegt
                                                        // werden fließen bei Neuanlegen von Items
                                                        // in den entsprechenden ExtFields Liste mit rein
