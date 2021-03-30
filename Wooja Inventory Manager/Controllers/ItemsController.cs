@@ -7,41 +7,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
-using Wooja_Inventory_Manager.Services;
 
 namespace Wooja_Inventory_Manager.Controllers
 {
     public class ItemsController : Controller
-    {
-        private readonly DBSelecter dbSelecter = new DBSelecter();
-       // private string dbSelectedContext;
+            {
 
-        public ItemsController(DBSelecter _dbSelecter) {
-            _dbSelecter = dbSelecter;
-            // DbContext context = new _dbSelecterGetCurrentDBContext();
-
-           // DbContext __dbSelecter = _dbSelecter.GetCurrentDBContext;
-            //if (_dbSelecter.SelectSQLite)
-            //{
-            //    _dbSelecter.DefaultDBContext context = _dbSelecter.DefaultDBContext();
-            //    //  DefaultDBContext context = new DefaultDBContext();
-            //}
-            //else
-            //{
-               
-            //}
-        }
         SqliteContext context = new SqliteContext();
-        // dbSelectedContext = _dbSelecter.SelectSQLite;
-
-        // SqliteContext databaseContext = new SqliteContext();
-        //databaseContext.Database.EnsureCreated();
-
         // GET: ItemsController
         public ActionResult ItemsView()
         {
-            
-            //_dbSelecter.SelectSQLite.;
+           
             return View(context.Items);
         }
 

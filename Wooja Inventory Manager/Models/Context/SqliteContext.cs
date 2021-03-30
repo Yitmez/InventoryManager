@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wooja_Inventory_Manager.Models.Context
 {
-    public class SqliteContext : DbContext, ISqlContext
+    public class SqliteContext : DbContext
 
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -43,7 +43,7 @@ namespace Wooja_Inventory_Manager.Models.Context
        public DbSet<User> Users { get; set; }
        public DbSet<Localization> Location { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
-    //  public DbSet<Log> Log { get; set; }
+      public DbSet<Log> Log { get; set; }
         public DbSet<Mandatory> Mandatories { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Rights> Rights { get; set; }
