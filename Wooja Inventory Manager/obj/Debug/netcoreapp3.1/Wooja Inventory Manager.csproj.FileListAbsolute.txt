@@ -158,3 +158,5 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Settings.cshtml.g.cs
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Resources.DE.resources
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Wooja_Inventory_Manager.Resources.EN.resources
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cookies.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SimpleLayout.cshtml.g.cs

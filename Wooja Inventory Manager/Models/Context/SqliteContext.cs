@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wooja_Inventory_Manager.Models.Context
 {
-    public class SqliteContext : DbContext
+    public class SqliteContext : DbContext, ISqlContext
 
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

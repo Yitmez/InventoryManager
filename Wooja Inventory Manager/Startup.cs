@@ -36,7 +36,7 @@ namespace Wooja_Inventory_Manager
 
             services.AddControllersWithViews();
             services.AddSingleton<IItemGenerator, Item>(); ///////////////////////////////
-                                                           // services.AddSingleton<IDBSelecter, DBSelecter>();
+            services.AddSingleton<IDBSelecter, DBSelecter>();
                                                            //Über DI DBs unterscheiden
                                                            //string selectedDatabase = Configuration["DataBase"];
                                                            //Console.WriteLine (selectedDatabase);
