@@ -7,13 +7,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
+using Wooja_Inventory_Manager.Services;
 
 namespace Wooja_Inventory_Manager.Controllers
 {
     public class ItemsController : Controller
             {
 
-        MyContext context = new MyContext();
+        WIMContext context;
+        public ItemsController(IDBSelecter selecter)
+        {
+            context = selecter.GetCurrentDBContext();
+        }
+        
+        // WIMContext context = new WIMContext();
         // GET: ItemsController
         public ActionResult ItemsView()
         {

@@ -17,14 +17,15 @@ namespace Wooja_Inventory_Manager.Controllers
         private readonly ILogger<HomeController> _logger;
        
 
-        public HomeController(ILogger<HomeController> logger) //, DBSelecter selector
+        public HomeController(ILogger<HomeController> logger, IDBSelecter selecter) //, 
         {
             _logger = logger;
-            Context = new DBSelecter().GetCurrentDBContext();  //selector.GetCurrentDBContext();
+            Context = selecter.GetCurrentDBContext();
+            //Context = new DBSelecter().GetCurrentDBContext();  //selector.GetCurrentDBContext();
         }
 
 
-        MyContext Context;
+        WIMContext Context;
 
 
         public IActionResult Index()

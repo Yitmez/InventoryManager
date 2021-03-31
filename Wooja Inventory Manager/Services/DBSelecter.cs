@@ -22,7 +22,7 @@ namespace Wooja_Inventory_Manager.Services
 
         //string IDBSelecter.CurrentDBContext { get; set; }
         public string CurrentDBContext;
-        MyContext SelectedDB;
+        WIMContext SelectedDB;
         //public string selectedDBContext;
 
 
@@ -35,11 +35,11 @@ namespace Wooja_Inventory_Manager.Services
             if (SelectSQLite)
             {
               
-                SelectedDB = new MyContext(); // Connection x
+                SelectedDB = new WIMContext(); // Connection x
 
             } else
             {
-                SelectedDB = new MyContext();  // Connection Z
+                SelectedDB = new WIMContext();  // Connection Z
                         }
             //if (SelectSQLite)
             //{
@@ -61,7 +61,7 @@ namespace Wooja_Inventory_Manager.Services
 
 
 
-        public MyContext GetCurrentDBContext()
+        public WIMContext GetCurrentDBContext()
         {
             return SelectedDB;
         }
