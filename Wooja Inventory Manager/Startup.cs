@@ -46,6 +46,10 @@ namespace Wooja_Inventory_Manager
 
             //services.AddSingleton<IDBSelecter>(serviceProvider =>
             //{
+            services.AddDbContext<SQLServerContext>(opts => {
+                opts.UseSqlServer(Configuration["ConnectionStrings:WIMConnection"]);
+            });
+
             string selectedDatabase = Configuration["DataBase"];
             //    return (IDBSelecter)ActivatorUtilities.CreateInstance(serviceProvider, selectedDatabase == null ?
             //        )
