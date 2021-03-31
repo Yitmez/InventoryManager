@@ -17,13 +17,14 @@ namespace Wooja_Inventory_Manager.Controllers
         private readonly ILogger<HomeController> _logger;
        
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger) //, DBSelecter selector
         {
             _logger = logger;
+            Context = new DBSelecter().GetCurrentDBContext();  //selector.GetCurrentDBContext();
         }
 
 
-        SqliteContext sqliteContext = new SqliteContext();
+        MyContext Context;
 
 
         public IActionResult Index()
@@ -38,7 +39,7 @@ namespace Wooja_Inventory_Manager.Controllers
         public async Task<IActionResult> Settings(int id)
             {
             //  sqliteContext.Settings.Find   //   die Felder mit aktuellen Werten in die settings... danach weitergeben
-            var settings = await sqliteContext.Settings
+            var settings = await Context.Settings
                 .AsNoTracking()
                 .FirstOrDefaultAsync(i => i.Id == id);
 
@@ -54,7 +55,7 @@ namespace Wooja_Inventory_Manager.Controllers
             Settings settings;
             try
             {
-                settings = await sqliteContext.Settings
+                settings = await Context.Settings
                          .AsNoTracking()
                          .FirstOrDefaultAsync(i => i.Id == 1);
                 settings.Theme = theme;
@@ -64,13 +65,13 @@ namespace Wooja_Inventory_Manager.Controllers
                 //Configuration[]   // in die Configurationsdatei schreiben -> wie??
                 // settings.Language = language;
 
-                sqliteContext.Settings.Update(settings);
+                Context.Settings.Update(settings);
             }
             catch
             {
                 settings = new Settings() { Theme = "Wooja", CompanyName = companyName, DB = db };
-                sqliteContext.Settings.Add(settings);
-                sqliteContext.SaveChanges();
+                Context.Settings.Add(settings);
+                Context.SaveChanges();
             }
                
 
@@ -84,7 +85,7 @@ namespace Wooja_Inventory_Manager.Controllers
             
             //   Settings settings = new Settings() { Theme = theme, CompanyName = companyName, Logo = logoPath, MwSt = tax, DB = db, Language = language, Server = server, Port = port, Version = version };
 
-            sqliteContext.SaveChanges();
+            Context.SaveChanges();
 
 
             return View(settings);

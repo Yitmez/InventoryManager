@@ -14,6 +14,10 @@ namespace Wooja_Inventory_Manager.Models.Context
         //    optionsBuilder.UseSqlite("Data Source=InventorySqlite.db");
         //    base.OnConfiguring(optionsBuilder);
         //}
+
+        public SQLServerContext(DbContextOptions<SQLServerContext> opts)  // Parameterweitergabe
+            : base(opts) { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Settings>().HasData(

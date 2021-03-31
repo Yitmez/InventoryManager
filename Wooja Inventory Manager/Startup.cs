@@ -44,9 +44,12 @@ namespace Wooja_Inventory_Manager
             //services.AddDbContext<SqliteContext>(options =>
             //options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
-            //services.AddSingleton<IDBSelecter>(serviceProvider =>
+            services.AddSingleton<IDBSelecter, DBSelecter>();
             //{
-            services.AddDbContext<SQLServerContext>(opts => {
+
+
+            services.AddDbContext<SQLServerContext>(opts =>
+            {
                 opts.UseSqlServer(Configuration["ConnectionStrings:WIMConnection"]);
             });
 

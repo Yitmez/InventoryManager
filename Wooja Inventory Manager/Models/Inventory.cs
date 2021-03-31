@@ -12,7 +12,7 @@ namespace Wooja_Inventory_Manager.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string InvSession { get; set; }    // string JSON =  Item, SN, Info, WarenWert, EK?
-        public Mandatory MandatoryId { get; set; }
+        public Mandatory Mandatory { get; set; }
         public DateTime InvDate { get; set; }
         public User Responsive { get; set; }
         public Log Changes { get; set; } = new Log();

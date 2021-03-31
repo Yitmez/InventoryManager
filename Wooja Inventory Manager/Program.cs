@@ -19,7 +19,7 @@ namespace Wooja_Inventory_Manager
             //DBSelecter dbSelector = new DBSelecter();
             //if (dbSelector.SelectSQLite)
             //{
-                SqliteContext databaseContext = new SqliteContext();
+                MyContext databaseContext = new MyContext();
                 databaseContext.Database.EnsureCreated();
             //} else if (dbSelector.SelectSQLite == false)
             //{

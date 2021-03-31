@@ -22,7 +22,7 @@ namespace Wooja_Inventory_Manager.Services
 
         //string IDBSelecter.CurrentDBContext { get; set; }
         public string CurrentDBContext;
-        DbContext SelectedDB;
+        MyContext SelectedDB;
         //public string selectedDBContext;
 
 
@@ -34,14 +34,13 @@ namespace Wooja_Inventory_Manager.Services
 
             if (SelectSQLite)
             {
-             //  CurrentDBContext = DefaultDBContext;
-                SelectedDB = new SqliteContext();
+              
+                SelectedDB = new MyContext(); // Connection x
 
             } else
             {
-                SelectedDB = new Sqlite2Context();
-               // CurrentDBContext = SecondDBContext;
-            }
+                SelectedDB = new MyContext();  // Connection Z
+                        }
             //if (SelectSQLite)
             //{
             //    SqliteContext CurrentDBContext = new SqliteContext();
@@ -55,13 +54,14 @@ namespace Wooja_Inventory_Manager.Services
             //    Sqlite2Context CurrentDBContext = new Sqlite2Context();
             //    CurrentDBContext.Database.EnsureCreated();
             //      selectedDBContext = CurrentDBContext;
-                
-            //}       
+
+            //}
+           //  Sqlite2Context CurrentDBContext = new Sqlite2Context();
         }
 
 
 
-        public DbContext GetCurrentDBContext()
+        public MyContext GetCurrentDBContext()
         {
             return SelectedDB;
         }

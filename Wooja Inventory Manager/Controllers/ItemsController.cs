@@ -13,7 +13,7 @@ namespace Wooja_Inventory_Manager.Controllers
     public class ItemsController : Controller
             {
 
-        SqliteContext context = new SqliteContext();
+        MyContext context = new MyContext();
         // GET: ItemsController
         public ActionResult ItemsView()
         {
