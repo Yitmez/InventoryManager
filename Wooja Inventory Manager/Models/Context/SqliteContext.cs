@@ -23,7 +23,7 @@ namespace Wooja_Inventory_Manager.Models.Context
                     Theme = "Wooja",
                     DB = "Sqlite",
                     CompanyName = "",
-                   // ProgramLog = new Log()
+                  
 
         }) ;
         }
