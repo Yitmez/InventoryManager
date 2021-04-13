@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wooja Inventory Manager", "Wooja Inventory Manager\Wooja Inventory Manager.csproj", "{7B118416-6238-4D7F-8CE0-DB905284C19F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wooja Inventory Manager", "Wooja Inventory Manager\Wooja Inventory Manager.csproj", "{7B118416-6238-4D7F-8CE0-DB905284C19F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wooja.Inventory.Manager.Tests", "Wooja.Inventory.Manager.Tests\Wooja.Inventory.Manager.Tests.csproj", "{D2D7388D-B216-477F-8DCD-1774D959C270}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wooja.Inventory.Manager.Tests", "Wooja.Inventory.Manager.Tests\Wooja.Inventory.Manager.Tests.csproj", "{D2D7388D-B216-477F-8DCD-1774D959C270}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

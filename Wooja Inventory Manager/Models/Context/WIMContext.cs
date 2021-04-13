@@ -34,6 +34,25 @@ namespace Wooja_Inventory_Manager.Models.Context
                   
 
         }) ;
+
+            modelBuilder.Entity<User>().HasData(
+              new User
+              {
+                  Id = 1,
+                  Name = "Admin",
+                  TermsOfUse = true
+                  // Rights => Id = 1 (Administrator)
+              }) ;
+
+            modelBuilder.Entity<Rights>().HasData(
+             new Rights
+             {
+                 Id = 1,
+                 RightsName = "Administrator",
+                 
+
+             });
+
         }
 
         public DbSet<Settings> Settings { get; set; } 

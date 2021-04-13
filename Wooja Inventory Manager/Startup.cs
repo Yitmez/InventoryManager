@@ -15,6 +15,8 @@ using Wooja_Inventory_Manager.Middleware;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
 using Wooja_Inventory_Manager.Services;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Wooja_Inventory_Manager
 {
@@ -52,6 +54,13 @@ namespace Wooja_Inventory_Manager
             {
                 opts.UseSqlServer(Configuration["ConnectionStrings:WIMConnection"]);
             });
+
+            //services.AddDbContext<CalculationContext>(opts => {
+            //    opts.UseSqlServer(Configuration["ConnectionStrings:CalcConnection"]);
+            //});
+
+
+
 
             string selectedDatabase = Configuration["DataBase"];
             //    return (IDBSelecter)ActivatorUtilities.CreateInstance(serviceProvider, selectedDatabase == null ?
@@ -130,7 +139,6 @@ namespace Wooja_Inventory_Manager
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 
                 endpoints.MapControllerRoute(
                     name: "items",

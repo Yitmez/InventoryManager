@@ -37,12 +37,12 @@ namespace Wooja_Inventory_Manager.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Settings(int id)
-            {
+        public async Task<IActionResult> Settings() //int id
+        {
             //  sqliteContext.Settings.Find   //   die Felder mit aktuellen Werten in die settings... danach weitergeben
             var settings = await Context.Settings
                 .AsNoTracking()
-                .FirstOrDefaultAsync(i => i.Id == id);
+                .FirstOrDefaultAsync(i => i.Id == 1);
 
             //Settings settings = new Settings();
 
@@ -50,7 +50,13 @@ namespace Wooja_Inventory_Manager.Controllers
         }
             
         [HttpPost]
-        public async Task<IActionResult> Settings(string theme, string companyName, string db) // string logoPath, string version, int tax,, string language, string server, string port,
+        public async Task<IActionResult> Settings(string theme, string companyName, string db, string logoPath, string version, 
+            int tax, string language, string server, string port, int year, string conString, string dbPw, string licenceType,
+            string licenceChecked, bool labelOn) 
+
+            // , ,
+
+
         {
            // if(sqliteContext..Settings)
             Settings settings;
@@ -61,10 +67,22 @@ namespace Wooja_Inventory_Manager.Controllers
                          .FirstOrDefaultAsync(i => i.Id == 1);
                 settings.Theme = theme;
                 settings.CompanyName = companyName;
-                //settings.Version = version;
+                settings.Version = version;
                 settings.DB = db;
+                settings.Logo = logoPath;
+                settings.PW = dbPw;
+                settings.LicenceType = licenceType;
+                settings.LicenceChecked = licenceChecked;
                 //Configuration[]   // in die Configurationsdatei schreiben -> wie??
-                // settings.Language = language;
+                settings.Language = language;
+                settings.DateYear = year;
+                settings.DB = db;
+                settings.Server = server;
+                settings.ConString = conString;
+                settings.Port = port;
+                settings.MwSt = tax;
+                settings.LabelOn = labelOn; // Ettiketten erzeugen ja/nein - Ausschalt-Möglichkeit
+
 
                 Context.Settings.Update(settings);
             }
