@@ -1,0 +1,19 @@
+﻿@page
+@using Wooja_Inventory_Manager.Models.Components
+
+@inject ColorsData Data
+
+<div class="m-2">
+    <table class="table table-sm table-striped table-bordered">
+        <tbody>
+            @foreach (Color c in Data.Colors)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>@c.HexCode</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
