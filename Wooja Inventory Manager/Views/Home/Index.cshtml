@@ -1,7 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@page
+@inject ColorsData Data
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, ViewComponents
 
-}
+@using Wooja_Inventory_Manager.Models.Components
+@model ColorsData 
+ <!--Zeile 7  Kann gelöscht werden / evtl auch andere... klappt nicht wie erhofft -->
+
+<!--
+    [at]{    ViewData["Title"] = "Home Page"; }
+    -->
 
 <script>
     // Save button opens a modal dialog
@@ -34,15 +42,25 @@
 
 
 </div>
-<div id="showDashboard">
-
+<div id="showDashboard">                              <!--  Kann gelöscht werden -->
+    <div style="color:yellowgreen" class="bg-info text-white m-2 p-2">
+        <!--   [at]await Component.InvokeAsync("ColorSummary") -->
+        <vc:color-summary />
+    </div>
+    <div>
+        <tr class="bg-primary text-white text-center">
+            <th colspan="2">Product Colors</th>
+        </tr>
+    </div>
 
 </div>
+
+
 <footer>
     <environment names="development">
-        <h2 class="bg-info text-white m-2 p-2"  style="bottom:10px">Development</h2>
+        <h2 class="bg-info text-white m-2 p-2" style="bottom:10px">Development</h2>
     </environment>
     <environment names="production">
-        <h2 class="bg-danger text-white m-2 p-2"  style="bottom:10px">Production</h2>
+        <h2 class="bg-danger text-white m-2 p-2" style="bottom:10px">Production</h2>
     </environment>
 </footer>

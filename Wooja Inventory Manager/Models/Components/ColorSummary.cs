@@ -19,9 +19,12 @@ namespace Wooja_Inventory_Manager.Models.Components
 
         // IViewComponentResult für... ginge auch.  ?? prüfen
         public string Invoke() //parameter (string themeName) könnte auch gehen 
-                              
+        //    {
+        //    return $"{data.HexCode.Count()} colors, "
+        //    + $"{data.HexCode.Sum(c => c)} name";
+        //}
         {
-            ViewBag.Theme = "Extra Info, könnte per Parameter kommen";
+           // ViewBag.Theme = "Extra Info, könnte per Parameter kommen";
             return ("Weitergabe von Informationen");
         }
     }
