@@ -185,3 +185,7 @@ C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Settings\Categories.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\ErrorList.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\TodoList.cshtml.g.cs
+C:\Users\CC-Student\source\repos\Wooja Inventory Manager\Wooja Inventory Manager\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Colors.cshtml.g.cs

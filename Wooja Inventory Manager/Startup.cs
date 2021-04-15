@@ -17,6 +17,7 @@ using Wooja_Inventory_Manager.Models.Context;
 using Wooja_Inventory_Manager.Services;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Hosting;
+using Wooja_Inventory_Manager.Models.Components;
 
 namespace Wooja_Inventory_Manager
 {
@@ -48,7 +49,7 @@ namespace Wooja_Inventory_Manager
 
             services.AddSingleton<IDBSelecter, DBSelecter>();
             //{
-
+            services.AddSingleton<ColorsData>();
 
             services.AddDbContext<SQLServerContext>(opts =>
             {
