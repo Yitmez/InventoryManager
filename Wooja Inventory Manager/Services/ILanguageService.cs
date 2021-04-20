@@ -7,5 +7,7 @@ namespace Wooja_Inventory_Manager.Services
 {
     public interface ILanguageService
     {
+
+
     }
 }

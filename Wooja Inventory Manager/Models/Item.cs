@@ -12,7 +12,7 @@ namespace Wooja_Inventory_Manager.Models
 
         [Key]
         public int Id { get; set; }
-        public string FolderNo { get; set; }
+        public string InternNo { get; set; } 
         public Category Category { get; set; }
         public Class Class { get; set; }
         public string Name { get; set; } // Unklar, evtl. für Eigennamen

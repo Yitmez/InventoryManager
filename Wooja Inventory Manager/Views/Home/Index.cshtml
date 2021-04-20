@@ -12,17 +12,19 @@
     -->
 
 <script>
+   
     // Save button opens a modal dialog
-    saveButton.addEventListener('click', function () {
-        dialog.showModal();
-        openCheck(dialog);
-    });
+    //saveButton.addEventListener('click', function () {
+    //    dialog.showModal();
+    //    openCheck(dialog);
+    //});
 
     // Form cancel button closes the dialog box
-    cancelButton.addEventListener('click', function () {
-        dialog.close('cockie-dialog');
-        openCheck(dialog);
-    });
+    //cancelButton.addEventListener('click', function () {
+    //    dialog.close('cockie-dialog');
+    //    openCheck(dialog);
+    //});
+   
 </script>
 
 }
@@ -42,25 +44,30 @@
 
 
 </div>
-<div id="showDashboard">                              <!--  Kann gelöscht werden -->
-    <div style="color:yellowgreen" class="bg-info text-white m-2 p-2">
-        <!--   [at]await Component.InvokeAsync("ColorSummary") -->
-        <vc:color-summary />
-    </div>
-    <div>
-        <tr class="bg-primary text-white text-center">
-            <th colspan="2">Product Colors</th>
-        </tr>
-    </div>
+<div id="showDashboard">
+    <!--  Kann gelöscht werden -->
+    <!--   <div style="color:yellowgreen" class="bg-info text-white m-2 p-2">
+              [at]await Component.InvokeAsync("ColorSummary")
+            <vc:color-summary />
+               -->
 
 </div>
+<div>
+    <!--
+            <tr class="bg-primary text-white text-center">
+                <th colspan="2">Product Colors</th>
+            </tr>
+
+        -->
+        </div>
 
 
-<footer>
-    <environment names="development">
-        <h2 class="bg-info text-white m-2 p-2" style="bottom:10px">Development</h2>
-    </environment>
-    <environment names="production">
-        <h2 class="bg-danger text-white m-2 p-2" style="bottom:10px">Production</h2>
-    </environment>
-</footer>
+
+    <footer>
+        <environment names="development">
+            <h2 class="bg-info text-white m-2 p-2" style="bottom:10px">Development</h2>
+        </environment>
+        <environment names="production">
+            <h2 class="bg-danger text-white m-2 p-2" style="bottom:10px">Production</h2>
+        </environment>
+    </footer>

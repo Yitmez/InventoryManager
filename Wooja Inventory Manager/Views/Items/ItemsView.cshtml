@@ -1,5 +1,7 @@
 ﻿@using Wooja_Inventory_Manager.Models
 @model IEnumerable<Item>
+@addTagHelper *, WebApp
+
 
 @{
     ViewData["Title"] = "ItemsView";
@@ -17,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FolderNo)
+                @Html.DisplayNameFor(model => model.InternNo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -26,12 +28,14 @@
                 @Html.DisplayNameFor(model => model.Description)
             </th>
             <th>
+
                 @Html.DisplayNameFor(model => model.SN)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ConstructionYear)
             </th>
             <th>
+               
                 @Html.DisplayNameFor(model => model.NetAmount)
             </th>
             <th>
@@ -72,7 +76,7 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.FolderNo)
+                    @Html.DisplayFor(modelItem => item.InternNo)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
@@ -117,9 +121,9 @@
                     @Html.DisplayFor(modelItem => item.CurrentInv)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new {id=item.Id}) |
-                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id=item.Id  })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }
@@ -134,10 +138,10 @@
     </h6>
     <cache expires-after="@TimeSpan.FromSeconds(15)">
         <h6 class="bg-primary text-white m-2 p-2">
-            
-                Cached timestamp: @DateTime.Now.ToLongTimeString()
+
+            Cached timestamp: @DateTime.Now.ToLongTimeString()
         </h6>
     </cache>
-  
+
 
 </div>

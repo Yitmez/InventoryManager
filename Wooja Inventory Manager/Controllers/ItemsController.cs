@@ -15,16 +15,23 @@ namespace Wooja_Inventory_Manager.Controllers
             {
 
         WIMContext context;
-        public ItemsController(IDBSelecter selecter)
+        public ItemsController( WIMContext context) // IDBSelecter selecter später differenzieren
         {
-            context = selecter.GetCurrentDBContext();
+            this.context = context;
+      //      context = selecter.GetCurrentDBContext();
         }
         
         // WIMContext context = new WIMContext();
         // GET: ItemsController
         public ActionResult ItemsView()
         {
-           
+            IList<Brand> brandList = new List<Brand>() {
+                    new Brand(){ Id=1, Name="Mercedes-Benz" },
+                     new Brand(){ Id=2, Name="MAN" },
+                     new Brand(){ Id=3, Name="Liebherr" }
+                    
+                };
+            ViewBag.BrandList  = brandList;
             return View(context.Items);
         }
 
@@ -53,7 +60,7 @@ namespace Wooja_Inventory_Manager.Controllers
         // POST: ItemsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection, string folderNo, string name, Brand brand, 
+        public ActionResult Create(IFormCollection collection, string internNo, string name, Brand brand, 
             Models.Type type, Color color, int constructionYear, string description, string sn, Status status, 
             int netAmount,
             Localization local, bool sold, Customer soldTo, User soldBy, DateTime soldDate, bool reserved, 
@@ -67,7 +74,7 @@ namespace Wooja_Inventory_Manager.Controllers
 
                 Item item = new Item()
                 {
-                    FolderNo = folderNo,
+                    InternNo = internNo,
                     Name = name,
                     Brand = brand,
                     Type = type,
@@ -86,9 +93,9 @@ namespace Wooja_Inventory_Manager.Controllers
                 context.Items.Add(item);
 
                 context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+               return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }

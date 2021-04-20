@@ -28,7 +28,7 @@ namespace Wooja_Inventory_Manager.Models.Context
                 new Settings
                 {
                     Id = 1,
-                    Theme = "Wooja",
+                    Theme = "Standard",
                     DB = "Sqlite",
                     CompanyName = "",
                   
@@ -42,16 +42,36 @@ namespace Wooja_Inventory_Manager.Models.Context
                   Name = "Admin",
                   TermsOfUse = true
                   // Rights => Id = 1 (Administrator)
-              }) ;
+              },
+              
+  new User { Id = 2, Name = "Yitmez", TermsOfUse = true },
+   new User { Id = 3, Name = "Gast", TermsOfUse = true}) ;
 
             modelBuilder.Entity<Rights>().HasData(
              new Rights
+             {  Id = 1, RightsName = "Administrator" },
+             new Rights { Id = 2, RightsName = "User" });
+
+            modelBuilder.Entity<Brand>().HasData(
+             new Brand
              {
                  Id = 1,
-                 RightsName = "Administrator",
-                 
+                 Name = "Mercedes-Benz",
+              },
+             new Brand { Id = 2, Name = "MAN"  },
+              new Brand { Id = 3, Name = "Caterpillar" });
 
-             });
+          
+
+
+
+            modelBuilder.Entity<Color>().HasData(
+ new Color { Id = 1, Name = "Schwarz", HexCode = "00000"},
+  new Color { Id = 2, Name = "Weiss", HexCode = "00000" },
+    new Color { Id = 3, Name = "Blau", HexCode = "00000" },
+    new Color { Id = 4, Name = "Gelb", HexCode = "00000" },
+      new Color { Id = 5, Name = "Rot", HexCode = "00000" },
+   new Color { Id = 6, Name = "Grün", HexCode = "00000" });
 
         }
 

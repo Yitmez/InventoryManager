@@ -15,9 +15,8 @@ using Wooja_Inventory_Manager.Middleware;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
 using Wooja_Inventory_Manager.Services;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Hosting;
 using Wooja_Inventory_Manager.Models.Components;
+using SQLitePCL;
 
 namespace Wooja_Inventory_Manager
 {
@@ -44,10 +43,10 @@ namespace Wooja_Inventory_Manager
                                                            //string selectedDatabase = Configuration["DataBase"];
                                                            //Console.WriteLine (selectedDatabase);
 
-            //services.AddDbContext<SqliteContext>(options =>
-            //options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<WIMContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("WIMConnection")));
 
-            services.AddSingleton<IDBSelecter, DBSelecter>();
+          //  services.AddSingleton<IDBSelecter, DBSelecter>();
             //{
             services.AddSingleton<ColorsData>();
 

@@ -112,6 +112,23 @@ namespace Wooja_Inventory_Manager.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Mercedes-Benz"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "MAN"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Caterpillar"
+                        });
                 });
 
             modelBuilder.Entity("Wooja_Inventory_Manager.Models.Category", b =>
@@ -160,6 +177,44 @@ namespace Wooja_Inventory_Manager.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Colors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            HexCode = "00000",
+                            Name = "Schwarz"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            HexCode = "00000",
+                            Name = "Weiss"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            HexCode = "00000",
+                            Name = "Blau"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            HexCode = "00000",
+                            Name = "Gelb"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            HexCode = "00000",
+                            Name = "Rot"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            HexCode = "00000",
+                            Name = "Grün"
+                        });
                 });
 
             modelBuilder.Entity("Wooja_Inventory_Manager.Models.Condition", b =>
@@ -438,7 +493,7 @@ namespace Wooja_Inventory_Manager.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FolderNo")
+                    b.Property<string>("InternNo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastSeenOn")
@@ -647,6 +702,18 @@ namespace Wooja_Inventory_Manager.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Rights");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RightsName = "Administrator"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RightsName = "User"
+                        });
                 });
 
             modelBuilder.Entity("Wooja_Inventory_Manager.Models.Settings", b =>
@@ -733,7 +800,7 @@ namespace Wooja_Inventory_Manager.Migrations
                             DateYear = 0,
                             LabelOn = false,
                             MwSt = 0,
-                            Theme = "Wooja"
+                            Theme = "Standard"
                         });
                 });
 
@@ -875,6 +942,38 @@ namespace Wooja_Inventory_Manager.Migrations
                     b.HasIndex("RightsId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ExtraBoolField = false,
+                            GDPR = false,
+                            GDPRDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Admin",
+                            TermsOfUse = true,
+                            TermsOfUseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ExtraBoolField = false,
+                            GDPR = false,
+                            GDPRDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Yitmez",
+                            TermsOfUse = true,
+                            TermsOfUseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ExtraBoolField = false,
+                            GDPR = false,
+                            GDPRDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Gast",
+                            TermsOfUse = true,
+                            TermsOfUseDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Wooja_Inventory_Manager.Models.AddOn", b =>
