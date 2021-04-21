@@ -59,10 +59,13 @@
             asp-items="@ViewBag.BrandList">
     </select> -->
 
-                <select asp-for="Brand"
+                <select name="brandId"
                         class="form-control"
-                        asp-items="@(new SelectList(ViewBag.BrandList,"Name", "Text"))">
+                        asp-items="@ViewBag.BrandList">
+
                 </select>
+          
+
             </div>
             <div class="form-group">
                 <label asp-for="SoldDate" class="control-label"></label>

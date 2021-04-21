@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -25,13 +26,7 @@ namespace Wooja_Inventory_Manager.Controllers
         // GET: ItemsController
         public ActionResult ItemsView()
         {
-            IList<Brand> brandList = new List<Brand>() {
-                    new Brand(){ Id=1, Name="Mercedes-Benz" },
-                     new Brand(){ Id=2, Name="MAN" },
-                     new Brand(){ Id=3, Name="Liebherr" }
-                    
-                };
-            ViewBag.BrandList  = brandList;
+           
             return View(context.Items);
         }
 
@@ -44,6 +39,17 @@ namespace Wooja_Inventory_Manager.Controllers
         // GET: ItemsController/Create
         public ActionResult Create()
         {
+            //IList<Brand> brandList = new List<Brand>() {
+            //        new Brand(){ Id=1, Name="Mercedes-Benz" },
+            //         new Brand(){ Id=2, Name="MAN" },
+            //         new Brand(){ Id=3, Name="Liebherr" }
+
+            //    };
+            ViewBag.BrandList = new List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> {
+             new SelectListItem(){ Value="1", Text="Mercedes-Benz" },
+                     new SelectListItem(){ Value="2", Text="MAN" },
+                     new SelectListItem(){ Value="3", Text="Liebherr", Selected = true }
+            };
             try
             {
                
@@ -60,33 +66,35 @@ namespace Wooja_Inventory_Manager.Controllers
         // POST: ItemsController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection, string internNo, string name, Brand brand, 
-            Models.Type type, Color color, int constructionYear, string description, string sn, Status status, 
-            int netAmount,
-            Localization local, bool sold, Customer soldTo, User soldBy, DateTime soldDate, bool reserved, 
-           int lendOutAmount, bool lendOut, DateTime lendOutDate, Customer lendOutTo, bool localSale,
-           DateTime lastSeenOn, bool currentInv, Condition condition)
-
+        public ActionResult Create(IFormCollection collection, string internNo, string name, string description,
+            string sn, int constructionYear, int netAmount, bool sold, int brandId, // Status status,  Color color,  Models.Type type
+            DateTime soldDate,
+             bool reserved, int lendOutAmount, bool lendOut, DateTime lendOutDate,  Customer soldTo // User soldBy, 
+          , Customer lendOutTo, bool localSale, DateTime lastSeenOn, bool currentInv) // Condition condition, Localization local, 
         {
-
             try
             {
-
                 Item item = new Item()
                 {
                     InternNo = internNo,
                     Name = name,
-                    Brand = brand,
-                    Type = type,
                     Description = description,
                     SN = sn,
-                    Color = color,
-                    Status = status,
-                    Sold = sold,
                     ConstructionYear = constructionYear,
+                    NetAmount = netAmount,
+                    Sold = sold,
+                    // Color = color,
+                    //Status = status,
+                    // Type = type,
+                    Brand = context.Brands.Find(brandId),
+                   SoldDate = soldDate,
                     Reserved = reserved,
+                    LendOutAmount=lendOutAmount,
+                    LendOut = lendOut,
+                    LendOutDate = lendOutDate,
+                    LendOutTo = lendOutTo,
                     LocalSale = localSale,
-                    Condition = condition,
+                    //Condition = condition,
                     CurrentInv = currentInv,
 
                 };
