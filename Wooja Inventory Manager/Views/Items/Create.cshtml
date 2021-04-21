@@ -54,11 +54,15 @@
             </div>
             <div class="form-group">
                 <label asp-for="Brand" class="control-label"></label>
-              <!--    <input asp-for="Brand" class="form-control" />  -->
-                 <select class="form-control" asp-for="Brand" 
-             asp-items="@ViewBag.BrandList;
-">
-        </select>
+                <!--    <input asp-for="Brand" class="form-control" />
+    <select class="form-control" asp-for="Brand"
+            asp-items="@ViewBag.BrandList">
+    </select> -->
+
+                <select asp-for="Brand"
+                        class="form-control"
+                        asp-items="@(new SelectList(ViewBag.BrandList,"Name", "Text"))">
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="SoldDate" class="control-label"></label>

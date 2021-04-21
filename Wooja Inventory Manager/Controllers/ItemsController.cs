@@ -95,8 +95,9 @@ namespace Wooja_Inventory_Manager.Controllers
                 context.SaveChanges();
                return RedirectToAction(nameof(Index));
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
+                Console.WriteLine(e);
                 return View();
             }
         }

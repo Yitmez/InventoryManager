@@ -14,31 +14,32 @@ namespace Wooja_Inventory_Manager
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
             //DBSelecter dbSelector = new DBSelecter();
             //if (dbSelector.SelectSQLite)
             //{
-                WIMContext databaseContext = new WIMContext();
-                databaseContext.Database.EnsureCreated();
+
             //} else if (dbSelector.SelectSQLite == false)
             //{
             //    Sqlite2Context databaseContext = new Sqlite2Context();
             //    databaseContext.Database.EnsureCreated();
             //}
 
-
+            WIMContext databaseContext = new WIMContext();
+            databaseContext.Database.EnsureCreated();
 
             // SqliteContext databaseContext = new SqliteContext();
 
 
-           // Standardtabellen anlegen
+            // Standardtabellen anlegen
             //Settings settings = new Settings() { Theme = "Wooja" };
             //databaseContext.Settings.Add(settings);
             //databaseContext.SaveChanges();
 
             CreateHostBuilder(args).Build().Run();
-           /////////////////////////databaseContext.
+            /////////////////////////databaseContext.
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -48,7 +49,7 @@ namespace Wooja_Inventory_Manager
                     webBuilder.UseStartup<Startup>();
                 });
 
-       
-       
+
+
     }
 }
