@@ -126,23 +126,22 @@ namespace Wooja_Inventory_Manager.Controllers
                 };
                 context.Items.Add(item);
 
-                //if (ModelState.IsValid)
-                //{
-                //    TempData["name"] = item.Name;
-
-                //    return RedirectToAction(nameof(ItemsView));
-                //}
-                //else
-                //{
-                //    return View("Form");
-                //}
-
                 if (ModelState.GetValidationState(nameof(item.NetAmount))
                  == ModelValidationState.Valid && item.NetAmount < 1)
                 {
-                    ModelState.AddModelError(nameof(item.NetAmount), "Enter a positive price");
+                    ModelState.AddModelError(nameof(Item.NetAmount), "Enter a positive price");
                 }
-                
+
+                if (ModelState.IsValid)
+                {
+                    TempData["NetAmount"] = item.NetAmount;
+                    return RedirectToAction(nameof(ItemsView));
+                }
+                else
+                {
+                   // return View("Results", TempData);
+                    return View("Create");
+                }
 
                 context.SaveChanges();
                return RedirectToAction(nameof(Create));//Index
@@ -153,6 +152,10 @@ namespace Wooja_Inventory_Manager.Controllers
                 return View();
             }
         }
+        //public IActionResult Results()
+        //{
+        //    return View("Create", TempData);
+        //}
 
         // GET: ItemsController/Edit/5
         public ActionResult Edit(int id)
