@@ -55,6 +55,8 @@ namespace Wooja_Inventory_Manager
                 opts.UseSqlServer(Configuration["ConnectionStrings:WIMConnection"]);
             });
 
+            services.Configure<Microsoft.AspNetCore.Mvc.MvcOptions>(opts => opts.ModelBindingMessageProvider
+            .SetValueMustNotBeNullAccessor(value => "Please enter a value"));
             //services.AddDbContext<CalculationContext>(opts => {
             //    opts.UseSqlServer(Configuration["ConnectionStrings:CalcConnection"]);
             //});

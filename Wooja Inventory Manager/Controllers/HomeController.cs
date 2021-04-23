@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
 using Wooja_Inventory_Manager.Services;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Wooja_Inventory_Manager.Controllers
 {
@@ -44,7 +45,7 @@ namespace Wooja_Inventory_Manager.Controllers
             var settings = await Context.Settings
                 .AsNoTracking()
                 .FirstOrDefaultAsync(i => i.Id == 1);
-
+           
             //Settings settings = new Settings();
 
             return View(settings);
@@ -53,14 +54,26 @@ namespace Wooja_Inventory_Manager.Controllers
         [HttpPost]
         public async Task<IActionResult> Settings(string theme, string companyName, string db, string logoPath, string version, 
             int tax, string language, string server, string port, int year, string conString, string dbPw, string licenceType,
-            string licenceChecked, bool labelOn) 
+            string licenceChecked, bool labelOn)
 
-            // , ,
-
+          
 
         {
-           // if(sqliteContext..Settings)
             Settings settings;
+
+            if (ModelState.GetValidationState(nameof(settings.CompanyName)) == ModelValidationState.Valid && companyName == "")
+            {
+                ModelState.AddModelError(nameof(settings.CompanyName), "Enter a company name");
+            }
+
+            if (ModelState.GetValidationState(nameof(settings.MwSt)) == ModelValidationState.Valid && tax < 1)
+            {
+                ModelState.AddModelError(nameof(settings.MwSt), "Enter a positive Number");
+            }
+
+
+            // if(sqliteContext..Settings)
+         
             try
             {
                 settings = await Context.Settings

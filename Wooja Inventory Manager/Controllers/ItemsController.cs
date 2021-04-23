@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Wooja_Inventory_Manager.Models;
 using Wooja_Inventory_Manager.Models.Context;
 using Wooja_Inventory_Manager.Services;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Wooja_Inventory_Manager.Controllers
 {
@@ -24,10 +25,32 @@ namespace Wooja_Inventory_Manager.Controllers
         
         // WIMContext context = new WIMContext();
         // GET: ItemsController
+       // [HttpGet]
         public ActionResult ItemsView()
         {
-           
+            //string searchString;
+
+            //ViewData["CurrentFilter"] = searchString;
             return View(context.Items);
+        }
+
+        public ActionResult FilteredView()
+        {
+            string searchString;
+            string currentFilter;
+            int? pageNumber;
+
+            //ViewData["CurrentFilter"] = searchString;
+            //if (searchString != null)
+            //{
+            //    pageNumber = 1;
+            //}
+            //else
+            //{
+            //    searchString = currentFilter;
+            //} 
+           // Console.WriteLine(searchString);
+            return Redirect("items/itemsview");
         }
 
         // GET: ItemsController/Details/5
@@ -72,6 +95,9 @@ namespace Wooja_Inventory_Manager.Controllers
              bool reserved, int lendOutAmount, bool lendOut, DateTime lendOutDate,  Customer soldTo // User soldBy, 
           , Customer lendOutTo, bool localSale, DateTime lastSeenOn, bool currentInv) // Condition condition, Localization local, 
         {
+           
+
+
             try
             {
                 Item item = new Item()
@@ -100,8 +126,26 @@ namespace Wooja_Inventory_Manager.Controllers
                 };
                 context.Items.Add(item);
 
+                //if (ModelState.IsValid)
+                //{
+                //    TempData["name"] = item.Name;
+
+                //    return RedirectToAction(nameof(ItemsView));
+                //}
+                //else
+                //{
+                //    return View("Form");
+                //}
+
+                if (ModelState.GetValidationState(nameof(item.NetAmount))
+                 == ModelValidationState.Valid && item.NetAmount < 1)
+                {
+                    ModelState.AddModelError(nameof(item.NetAmount), "Enter a positive price");
+                }
+                
+
                 context.SaveChanges();
-               return RedirectToAction(nameof(Index));
+               return RedirectToAction(nameof(Create));//Index
             }
             catch (Exception e)
             {
@@ -150,10 +194,13 @@ namespace Wooja_Inventory_Manager.Controllers
                 // context.Items.Remove(item);
                 // context.SaveChanges();
                 // Lieber erst nach bestätigung löschen
+
+                 return View(item);
+               
             }
 
 
-            return View(item);
+            
         }
 
         // POST: ItemsController/Delete/5
@@ -175,7 +222,8 @@ namespace Wooja_Inventory_Manager.Controllers
                 context.Items.Remove(item);
                 context.SaveChanges();
             }
-            return View();
+            return RedirectToAction(nameof(ItemsView));
+           // return View();
             
         }
     }
